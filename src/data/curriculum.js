@@ -1,0 +1,201 @@
+// Curriculum: 6 learning paths with topics and subtopics
+export const curriculum = [
+  {
+    id: 'mathematics',
+    title: 'Mathematics',
+    icon: '∑',
+    color: '#3b82f6',
+    description: 'Core mathematical foundations for quantitative finance',
+    topics: [
+      {
+        id: 'calculus',
+        title: 'Calculus',
+        subtopics: ['Limits & Continuity', 'Differentiation', 'Integration', 'Multivariable Calculus', 'Taylor Series', 'Optimization'],
+        estimatedHours: 20,
+        description: 'Fundamental calculus concepts applied to finance and pricing.',
+      },
+      {
+        id: 'linear-algebra',
+        title: 'Linear Algebra',
+        subtopics: ['Vectors & Matrices', 'Eigenvalues & Eigenvectors', 'Matrix Decompositions (SVD, PCA)', 'Systems of Equations', 'Covariance Matrices'],
+        estimatedHours: 15,
+        description: 'Matrix operations, decompositions, and their applications in portfolio optimization.',
+      },
+      {
+        id: 'probability',
+        title: 'Probability Theory',
+        subtopics: ['Probability Spaces', 'Random Variables', 'Distributions', 'Expectation & Variance', 'Conditional Probability', 'Bayes\' Theorem', 'Moment Generating Functions'],
+        estimatedHours: 25,
+        description: 'Rigorous probability theory underpinning all of quantitative finance.',
+      },
+      {
+        id: 'statistics',
+        title: 'Statistics',
+        subtopics: ['Descriptive Statistics', 'Hypothesis Testing', 'Confidence Intervals', 'Regression Analysis', 'Maximum Likelihood Estimation', 'Bayesian Statistics'],
+        estimatedHours: 20,
+        description: 'Statistical inference, testing, and estimation methods.',
+      },
+    ],
+  },
+  {
+    id: 'financial-theory',
+    title: 'Financial Theory',
+    icon: '📈',
+    color: '#f59e0b',
+    description: 'Core financial models, derivatives, and portfolio theory',
+    topics: [
+      {
+        id: 'derivatives',
+        title: 'Derivatives & Options Pricing',
+        subtopics: ['Call & Put Options', 'Black-Scholes Model', 'Binomial Trees', 'Greeks (Delta, Gamma, Vega, Theta, Rho)', 'Exotic Options', 'Monte Carlo Pricing'],
+        estimatedHours: 30,
+        description: 'Comprehensive coverage of derivative instruments and their pricing.',
+      },
+      {
+        id: 'risk-management',
+        title: 'Risk Management',
+        subtopics: ['Value at Risk (VaR)', 'Expected Shortfall (CVaR)', 'Stress Testing', 'Credit Risk', 'Operational Risk', 'Basel III'],
+        estimatedHours: 20,
+        description: 'Measuring and managing financial risk across multiple dimensions.',
+      },
+      {
+        id: 'portfolio-theory',
+        title: 'Portfolio Theory',
+        subtopics: ['Markowitz Mean-Variance', 'Efficient Frontier', 'CAPM', 'Factor Models', 'Risk Parity', 'Black-Litterman'],
+        estimatedHours: 20,
+        description: 'Modern and post-modern portfolio construction and optimization.',
+      },
+      {
+        id: 'fixed-income',
+        title: 'Fixed Income',
+        subtopics: ['Bond Pricing', 'Duration & Convexity', 'Yield Curves', 'Term Structure Models', 'Credit Spreads', 'MBS & ABS'],
+        estimatedHours: 15,
+        description: 'Bond markets, interest rate models, and fixed income analytics.',
+      },
+    ],
+  },
+  {
+    id: 'stochastic-calculus',
+    title: 'Stochastic Calculus',
+    icon: '∫',
+    color: '#8b5cf6',
+    description: 'The mathematical engine behind continuous-time finance',
+    topics: [
+      {
+        id: 'brownian-motion',
+        title: 'Brownian Motion',
+        subtopics: ['Standard Brownian Motion', 'Properties (Continuity, Markov)', 'Quadratic Variation', 'Geometric Brownian Motion'],
+        estimatedHours: 15,
+        description: 'The fundamental stochastic process in continuous-time finance.',
+      },
+      {
+        id: 'ito-calculus',
+        title: "Itô's Lemma & Stochastic Calculus",
+        subtopics: ["Itô's Lemma", 'Stochastic Differentials', 'Itô Integrals', 'Feynman-Kac Formula', 'Girsanov Theorem'],
+        estimatedHours: 20,
+        description: "The cornerstone of continuous-time derivatives pricing.",
+      },
+      {
+        id: 'sdes',
+        title: 'Stochastic Differential Equations',
+        subtopics: ['GBM as an SDE', 'Ornstein-Uhlenbeck Process', 'CIR Model', 'Heston Model', 'Numerical SDE Methods (Euler-Maruyama)'],
+        estimatedHours: 20,
+        description: 'Models for asset prices, interest rates, and volatility.',
+      },
+    ],
+  },
+  {
+    id: 'econometrics',
+    title: 'Econometrics & Time Series',
+    icon: '📊',
+    color: '#14b8a6',
+    description: 'Statistical models for financial time series data',
+    topics: [
+      {
+        id: 'time-series',
+        title: 'Time Series Analysis',
+        subtopics: ['Stationarity', 'ACF & PACF', 'ARMA/ARIMA Models', 'Seasonal Decomposition', 'Cointegration'],
+        estimatedHours: 20,
+        description: 'Modeling and forecasting financial time series.',
+      },
+      {
+        id: 'volatility-models',
+        title: 'Volatility Models',
+        subtopics: ['ARCH & GARCH', 'EGARCH', 'Realized Volatility', 'Volatility Clustering', 'VIX & Implied Volatility'],
+        estimatedHours: 15,
+        description: 'Capturing the time-varying volatility in financial returns.',
+      },
+      {
+        id: 'regression',
+        title: 'Regression Analysis',
+        subtopics: ['OLS Regression', 'Ridge & Lasso', 'Logistic Regression', 'Panel Data', 'Structural Breaks'],
+        estimatedHours: 15,
+        description: 'Linear and nonlinear regression for financial modeling.',
+      },
+    ],
+  },
+  {
+    id: 'algo-trading',
+    title: 'Algorithmic Trading',
+    icon: '⚡',
+    color: '#f43f5e',
+    description: 'Systematic strategy design, backtesting, and execution',
+    topics: [
+      {
+        id: 'backtesting',
+        title: 'Backtesting',
+        subtopics: ['Event-Driven Backtesting', 'Walk-Forward Analysis', 'Overfitting & Look-Ahead Bias', 'Transaction Costs', 'Benchmark Comparison'],
+        estimatedHours: 15,
+        description: 'Rigorous historical testing of trading strategies.',
+      },
+      {
+        id: 'strategy-design',
+        title: 'Strategy Design',
+        subtopics: ['Momentum & Mean Reversion', 'Statistical Arbitrage', 'Pairs Trading', 'Market Making', 'Trend Following'],
+        estimatedHours: 20,
+        description: 'Building systematic alpha-generating strategies.',
+      },
+      {
+        id: 'market-microstructure',
+        title: 'Market Microstructure',
+        subtopics: ['Order Book Dynamics', 'Bid-Ask Spread', 'Price Impact', 'Optimal Execution (VWAP/TWAP)', 'High-Frequency Trading'],
+        estimatedHours: 15,
+        description: 'How markets actually work at a micro level.',
+      },
+    ],
+  },
+  {
+    id: 'programming',
+    title: 'Programming for Quant Finance',
+    icon: '</> ',
+    color: '#10b981',
+    description: 'Python and tools used by quantitative analysts',
+    topics: [
+      {
+        id: 'python-quant',
+        title: 'Python for Quant Finance',
+        subtopics: ['NumPy & SciPy', 'Pandas for Financial Data', 'Matplotlib & Plotly', 'Statsmodels', 'Scikit-learn for Finance'],
+        estimatedHours: 20,
+        description: 'The Python ecosystem for quantitative analysis.',
+      },
+      {
+        id: 'quantlib',
+        title: 'QuantLib & Derivatives Pricing',
+        subtopics: ['QuantLib Basics', 'Option Pricing', 'Interest Rate Models', 'Fixed Income Analytics', 'Monte Carlo with QuantLib'],
+        estimatedHours: 15,
+        description: 'Industry-standard library for financial instrument pricing.',
+      },
+      {
+        id: 'ml-finance',
+        title: 'Machine Learning in Finance',
+        subtopics: ['Feature Engineering', 'Supervised ML for Returns', 'Clustering Regimes', 'LSTM/RNN for Time Series', 'Reinforcement Learning for Trading'],
+        estimatedHours: 25,
+        description: 'Applying machine learning techniques to financial problems.',
+      },
+    ],
+  },
+];
+
+export const allTopics = curriculum.flatMap(path =>
+  path.topics.map(topic => ({ ...topic, pathId: path.id, pathTitle: path.title, pathColor: path.color }))
+);
