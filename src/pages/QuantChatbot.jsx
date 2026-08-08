@@ -170,15 +170,29 @@ export default function QuantChatbot() {
     setInput('');
     setLoading(true);
 
-    // Simulate AI response delay
-    setTimeout(() => {
-      const lowerQuery = query.toLowerCase();
-      const mockKey = Object.keys(mockResponses).find(k => lowerQuery.includes(k) || k.includes(lowerQuery));
-      const responseText = mockKey ? mockResponses[mockKey] : defaultResponse(query);
-
-      setMessages(prev => [...prev, { sender: 'ai', text: responseText }]);
-      setLoading(false);
-    }, 1200);
+    // Real backend call — replaces the old setTimeout + hardcoded
+    // mockResponses lookup. This hits the Flask retrieval endpoint,
+    // which searches the app's actual formula/curriculum data.
+    // VITE_API_URL is set in .env for local dev, and in Vercel's
+    // environment variables once deployed — same code, different target.
+    const apiUrl = import.meta.env.VITE_API_URL || 'http://127.0.0.1:5000';
+    fetch(`${apiUrl}/api/chatbot/ask`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ question: query }),
+    })
+      .then(res => res.json())
+      .then(data => {
+        setMessages(prev => [...prev, { sender: 'ai', text: data.answer }]);
+      })
+      .catch(err => {
+        console.error('Chatbot request failed:', err);
+        setMessages(prev => [...prev, {
+          sender: 'ai',
+          text: "Couldn't reach the backend. Make sure the Flask server is running on port 5000."
+        }]);
+      })
+      .finally(() => setLoading(false));
   };
 
   return (
