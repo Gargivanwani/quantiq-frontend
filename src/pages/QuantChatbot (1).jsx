@@ -246,7 +246,7 @@ export default function QuantChatbot() {
             <div className="px-4 py-3 border-b border-card flex items-center justify-between" style={{ borderColor: 'var(--border)' }}>
               <div className="flex items-center gap-2">
                 <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping-soft" />
-                <span className="text-xs font-bold text-white">Model: QuantGPT-v1 (Sandbox)</span>
+                <span className="text-xs font-bold text-primary">Model: QuantGPT-v1 (Sandbox)</span>
               </div>
               <span className="text-[10px] text-gray-500 font-semibold">Local Session</span>
             </div>
@@ -260,7 +260,7 @@ export default function QuantChatbot() {
                     <div
                       className={`max-w-[85%] rounded-2xl px-4 py-3 shadow-sm ${
                         isAI
-                          ? 'border border-gray-800 text-white rounded-tl-none'
+                          ? 'border border-gray-800 text-primary rounded-tl-none'
                           : 'bg-amber-500 text-gray-950 font-medium rounded-tr-none'
                       }`}
                       style={isAI ? { background: 'var(--bg-secondary)' } : {}}
@@ -283,7 +283,7 @@ export default function QuantChatbot() {
 
               {loading && (
                 <div className="flex justify-start">
-                  <div className="max-w-[85%] rounded-2xl px-4 py-3 border border-gray-800 text-white rounded-tl-none flex items-center gap-2" style={{ background: 'var(--bg-secondary)' }}>
+                  <div className="max-w-[85%] rounded-2xl px-4 py-3 border border-gray-800 text-primary rounded-tl-none flex items-center gap-2" style={{ background: 'var(--bg-secondary)' }}>
                     <div className="flex gap-1">
                       <div className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-bounce" style={{ animationDelay: '0ms' }} />
                       <div className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-bounce" style={{ animationDelay: '150ms' }} />
